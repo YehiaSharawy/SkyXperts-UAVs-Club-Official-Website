@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible"); // Add fade-in
+          // observer.unobserve(entry.target);
         } else {
           entry.target.classList.remove("visible"); // Remove fade-in when out of view
         }
@@ -13,27 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   const fadeElements = document.querySelectorAll(
-    ".fade-in, .border-animate, .hollow-text, .blob",
+    ".fade-in, .border-animate, .hollow-text, .blob, .handwritten",
   );
   fadeElements.forEach((el) => observer.observe(el));
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate"); // Start animation when visible
-        } else {
-          entry.target.classList.remove("animate"); // Remove if you want it to re-trigger on scroll
-        }
-      });
-    },
-    { threshold: 0.15 },
-  );
-
-  const handwritingElements = document.querySelectorAll(".handwritten");
-  handwritingElements.forEach((el) => observer.observe(el));
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -78,4 +61,19 @@ document.addEventListener("DOMContentLoaded", function () {
       smoothScroll(target, 1200); // Adjust the duration (in ms) to control speed
     });
   });
+});
+
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector(".navbar-container");
+
+window.addEventListener("scroll", function () {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > 0.01) {
+    navbar.classList.add("hidden");
+  } else {
+    navbar.classList.remove("hidden");
+  }
+
+  lastScrollY = currentScrollY;
 });
