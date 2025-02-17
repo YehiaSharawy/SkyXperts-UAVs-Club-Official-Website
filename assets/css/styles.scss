@@ -54,18 +54,12 @@ body {
     max-width: 1280px;
     padding: 1rem 2rem;
     border-radius: 1.5em;
-    /* backdrop-filter: blur(15px); */
     transition:
         box-shadow 0.3s ease-in-out,
         backdrop-filter 0.3s ease-in-out;
-    /* box-shadow:
-        rgba(0, 0, 0, 0.4) 0px 2px 4px,
-        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
     z-index: 9999;
 
     &.hidden {
-        /* transform: translateY(-100%); */
         backdrop-filter: blur(15px);
         box-shadow:
             rgba(0, 0, 0, 0.4) 0px 2px 4px,
@@ -753,6 +747,8 @@ section {
             height: 100vh;
             align-items: center;
             justify-content: space-evenly;
+            perspective: 800px;
+            pointer-events: auto;
 
             .first-card-layer {
                 width: inherit;
@@ -773,6 +769,9 @@ section {
                 user-select: none;
                 width: 17em;
                 height: 22em;
+                will-change: transform;
+                position: relative;
+                overflow: visible;
                 border-radius: 1em;
                 backdrop-filter: blur(10px);
                 background-image: linear-gradient(
@@ -787,16 +786,51 @@ section {
                     rgba(52, 50, 202, 0.1) 0px 20px,
                     rgba(52, 50, 202, 0.05) 0px 25px;
 
+                transform: none;
+                transform-style: preserve-3d;
                 transition:
-                    transform 0.25s ease-in-out,
-                    box-shadow 0.3s ease-in-out;
+                    transform 0.1s ease-in-out,
+                    box-shadow 0.1s ease-in-out;
 
                 &:hover {
+                    cursor: pointer;
+                    transform: translateY(-10px);
+                    /* box-shadow:
+                        0 20px 50px rgba(0, 0, 0, 0.3),
+                        0 10px 30px rgba(0, 0, 0, 0.2); */
+                }
+
+                /* &:hover {
                     cursor: pointer;
                     transform: translateY(-0.7em) scale(1.05);
                     box-shadow:
                         rgba(52, 50, 202, 0.12) -16px 25px,
                         rgba(52, 50, 202, 0.12) 16px 25px;
+                } */
+
+                .particle {
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: #ff3131;
+                    border-radius: 50%;
+                    opacity: 1;
+                    transition:
+                        transform 0.8s ease-out,
+                        opacity 0.8s ease-out;
+                    pointer-events: none; /* Prevents interaction issues */
+                }
+
+                .glow-effect {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 1em;
+                    pointer-events: none; /* Prevents interference with mouse events */
+                    transition: opacity 0.3s ease-out;
+                    opacity: 0; /* Hidden by default */
                 }
 
                 .card-background {
