@@ -15,7 +15,7 @@ html {
 
 body {
   background-color: #101010;
-  background-image: url(./assets/imgs/etc/nnnoise.svg);
+  background-image: url(../../imgs/etc/nnnoise.svg);
   display: flex;
   flex-direction: column;
   align-items: center;
