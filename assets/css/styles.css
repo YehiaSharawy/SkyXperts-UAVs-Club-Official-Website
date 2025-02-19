@@ -15,7 +15,7 @@ html {
 
 body {
   background-color: #101010;
-  background-image: url(../../imgs/etc/nnnoise.svg);
+  background-image: url("/SkyXperts-UAVs-Club-Official-Website/assets/imgs/etc/nnnoise.svg");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,7 +142,7 @@ section:nth-child(2) .image {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(./assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg) center/cover;
+  background: url(/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg) center/cover;
 }
 section:nth-child(2) .image::before {
   content: "";
@@ -806,16 +806,16 @@ section:nth-child(6) .blogs-container .blog-container .blog-header p:nth-child(4
   text-align: right;
 }
 section:nth-child(6) .blogs-container .blog-container:nth-child(1) .blog-preview-img {
-  background-image: url(./assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg);
+  background-image: url(/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg);
 }
 section:nth-child(6) .blogs-container .blog-container:nth-child(2) .blog-preview-img {
-  background-image: url(./assets/imgs/team-imgs/events/rally/skyxpert-rallyteam.jpeg);
+  background-image: url(/assets/imgs/team-imgs/events/rally/skyxpert-rallyteam.jpeg);
 }
 section:nth-child(6) .blogs-container .blog-container:nth-child(3) {
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
 }
 section:nth-child(6) .blogs-container .blog-container:nth-child(3) .blog-preview-img {
-  background-image: url(./assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team2.jpeg);
+  background-image: url(/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team2.jpeg);
 }
 section:nth-child(7) {
   display: flex;
