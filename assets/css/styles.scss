@@ -27,7 +27,7 @@ html {
 }
 body {
     background-color: #101010;
-    background-image: url("../../imgs/etc/nnnoise.svg");
+    background-image: url(/assets/imgs/etc/nnnoise.svg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,7 +147,8 @@ section {
             height: 30vh;
             background-size: 50px 50px;
             background-color: transparent;
-            background-image: linear-gradient(
+            background-image:
+                linear-gradient(
                     0deg,
                     transparent 24%,
                     rgba(255, 255, 255, 0.2) 25%,
@@ -171,7 +172,8 @@ section {
                     transparent 77%,
                     transparent
                 );
-            mask-image: linear-gradient(
+            mask-image:
+                linear-gradient(
                     to bottom,
                     rgba(0, 0, 0, 0) 0%,
                     rgba(0, 0, 0, 1) 40%,
@@ -207,7 +209,7 @@ section {
             position: relative;
             width: 100%;
             height: 100%;
-            background: url("../../imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg")
+            background: url(/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg)
                 center/cover;
 
             &::before {
@@ -425,7 +427,8 @@ section {
             background-size: 50px 50px;
             background-color: transparent;
             background-color: rgba(28, 28, 28, 0.2);
-            background-image: linear-gradient(
+            background-image:
+                linear-gradient(
                     0deg,
                     transparent 24%,
                     rgba(255, 255, 255, 0.1) 25%,
@@ -747,7 +750,7 @@ section {
             height: 100vh;
             align-items: center;
             justify-content: space-evenly;
-            perspective: 800px;
+            /* perspective: 800px; */
             pointer-events: auto;
 
             .first-card-layer {
@@ -785,28 +788,19 @@ section {
                     rgba(52, 50, 202, 0.2) 0px 15px,
                     rgba(52, 50, 202, 0.1) 0px 20px,
                     rgba(52, 50, 202, 0.05) 0px 25px;
-
-                transform: none;
-                transform-style: preserve-3d;
                 transition:
                     transform 0.1s ease-in-out,
                     box-shadow 0.1s ease-in-out;
 
-                &:hover {
-                    cursor: pointer;
-                    transform: translateY(-10px);
-                    /* box-shadow:
-                        0 20px 50px rgba(0, 0, 0, 0.3),
-                        0 10px 30px rgba(0, 0, 0, 0.2); */
-                }
-
                 /* &:hover {
                     cursor: pointer;
-                    transform: translateY(-0.7em) scale(1.05);
-                    box-shadow:
-                        rgba(52, 50, 202, 0.12) -16px 25px,
-                        rgba(52, 50, 202, 0.12) 16px 25px;
+                    transform: translateY(-10px);
                 } */
+
+                &:hover {
+                    cursor: pointer;
+                    transform: translateY(-0.7em) scale(1.05);
+                }
 
                 .particle {
                     position: absolute;
@@ -1108,17 +1102,17 @@ section {
 
                 &:nth-child(1) {
                     .blog-preview-img {
-                        background-image: url("../../imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg");
+                        background-image: url(/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg);
                     }
                 }
                 &:nth-child(2) {
                     .blog-preview-img {
-                        background-image: url("../../imgs/team-imgs/events/rally/skyxpert-rallyteam.jpeg");
+                        background-image: url(/assets/imgs/team-imgs/events/rally/skyxpert-rallyteam.jpeg);
                     }
                 }
                 &:nth-child(3) {
                     .blog-preview-img {
-                        background-image: url("../../team-imgs/events/alamein-airshow/skyxpert-team2.jpeg");
+                        background-image: url(/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team2.jpeg);
                     }
                     mask-image: linear-gradient(
                         to top,
@@ -1266,7 +1260,8 @@ section {
                 z-index: -1;
                 content: "";
                 background-size: 35px 35px;
-                background-image: linear-gradient(
+                background-image:
+                    linear-gradient(
                         0deg,
                         transparent 24%,
                         rgba(52, 50, 202, 0.2) 25%,

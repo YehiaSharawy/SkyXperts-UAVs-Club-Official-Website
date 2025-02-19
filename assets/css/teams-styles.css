@@ -11,7 +11,7 @@ html {
 
 body {
   background-color: #101010;
-  background-image: url("/assets/imgs/etc/nnnoise.svg");
+  background-image: url("./assets/imgs/etc/nnnoise.svg");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -261,20 +261,13 @@ section:nth-child(2) .cards-container .card {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, rgba(52, 50, 202, 0.8) 92%);
   box-shadow: rgba(52, 50, 202, 0.4) 0px 5px, rgba(52, 50, 202, 0.3) 0px 10px, rgba(52, 50, 202, 0.2) 0px 15px, rgba(52, 50, 202, 0.1) 0px 20px, rgba(52, 50, 202, 0.05) 0px 25px;
   transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+  /* &:hover {
+      cursor: pointer;
+      transform: translateY(-10px);
+  } */
   /* transition:
       transform 0.25s ease-in-out,
       box-shadow 0.3s ease-in-out; */
-  /* &:hover {
-      cursor: pointer;
-      transform: translateY(-0.7em) scale(1.05);
-      box-shadow:
-          rgba(52, 50, 202, 0.12) -16px 25px,
-          rgba(52, 50, 202, 0.12) 16px 25px;
-  } */
-}
-section:nth-child(2) .cards-container .card:hover {
-  cursor: pointer;
-  transform: translateY(-10px);
 }
 section:nth-child(2) .cards-container .card .particle {
   position: absolute;
@@ -296,6 +289,10 @@ section:nth-child(2) .cards-container .card .glow-effect {
   pointer-events: none; /* Prevents interference with mouse events */
   transition: opacity 0.3s ease-out;
   opacity: 0; /* Hidden by default */
+}
+section:nth-child(2) .cards-container .card:hover {
+  cursor: pointer;
+  transform: translateY(-0.7em) scale(1.05);
 }
 section:nth-child(2) .cards-container .card .card-background {
   position: absolute;

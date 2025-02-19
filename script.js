@@ -77,44 +77,23 @@ window.addEventListener("scroll", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
+
   if (cards.length === 0) {
     console.error("No cards found in the DOM.");
     return;
   }
 
   cards.forEach((card) => {
-    let bounds;
     const glow = document.createElement("div");
     glow.classList.add("glow-effect");
     card.appendChild(glow);
 
-    function rotateToMouse(event) {
-      if (!bounds) return;
+    function updateGlow(event) {
+      const bounds = card.getBoundingClientRect();
+      const leftOffset = event.clientX - bounds.x;
+      const topOffset = event.clientY - bounds.y;
 
-      const mouseX = event.clientX;
-      const mouseY = event.clientY;
-
-      const leftOffset = mouseX - bounds.x;
-      const topOffset = mouseY - bounds.y;
-
-      const center = {
-        x: leftOffset - bounds.width / 2,
-        y: topOffset - bounds.height / 2,
-      };
-
-      const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
-
-      card.style.transform = `
-                scale3d(1.1, 1.1, 1.1)
-                rotate3d(
-                    ${-center.y / 100},
-                    ${center.x / 100},
-                    0,
-                    ${Math.log(distance) * 2}deg
-                )
-            `;
-
-      glow.style.background = `radial-gradient(circle at ${leftOffset}px ${topOffset}px, rgba(220, 20, 60, 0.2), rgba(220, 20, 60, 0) 50%)`;
+      glow.style.background = `radial-gradient(circle at ${leftOffset}px ${topOffset}px, rgba(220, 20, 60, 0.3), rgba(220, 20, 60, 0) 50%)`;
     }
 
     function createParticles() {
@@ -142,23 +121,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    card.addEventListener("mouseenter", () => {
-      bounds = card.getBoundingClientRect();
-      if (!bounds) return;
-      document.addEventListener("mousemove", rotateToMouse);
+    card.addEventListener("mouseenter", (event) => {
       glow.style.opacity = "1";
+      updateGlow(event);
       createParticles();
-      console.log("Mouse entered card");
+      card.addEventListener("mousemove", updateGlow);
     });
 
     card.addEventListener("mouseleave", () => {
-      setTimeout(() => {
-        document.removeEventListener("mousemove", rotateToMouse);
-        card.style.transition = "transform 0.1s ease-out";
-        card.style.transform = "";
-        glow.style.opacity = "0";
-        console.log("Mouse left card");
-      }, 200);
+      glow.style.opacity = "0";
+      card.removeEventListener("mousemove", updateGlow);
     });
   });
 });
