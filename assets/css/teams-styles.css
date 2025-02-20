@@ -11,7 +11,7 @@ html {
 
 body {
   background-color: #101010;
-  background-image: url("./assets/imgs/etc/nnnoise.svg");
+  background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/etc/nnnoise.svg");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,14 +168,13 @@ section:nth-child(2) .connector-line {
   z-index: -1;
 }
 section:nth-child(2) .cards-container {
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
-  margin-top: 15em;
+  margin-top: 17em;
   width: 100vw;
-  height: 100vh;
+  height: 333vh;
   align-items: center;
-  justify-content: space-evenly;
-  perspective: 800px;
+  justify-content: space-around;
   pointer-events: auto;
 }
 section:nth-child(2) .cards-container .separator {
@@ -224,9 +223,11 @@ section:nth-child(2) .cards-container .third-card-layer {
 }
 section:nth-child(2) .cards-container .fourth-card-layer {
   width: inherit;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 section:nth-child(2) .cards-container .fourth-card-layer .first-layer {
   display: flex;

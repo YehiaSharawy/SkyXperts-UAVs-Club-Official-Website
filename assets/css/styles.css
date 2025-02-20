@@ -103,27 +103,31 @@ section {
 section .title {
   display: flex;
   justify-content: center;
-  width: 100vw;
-  height: 17em;
-  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 12em;
+  position: relative;
+  padding: 2rem 0;
   pointer-events: none;
   user-select: none;
 }
 section .title h2 {
   position: relative;
-  height: 1.3em;
-  top: 20%;
+  height: auto;
   color: #f0f0f0;
-  font-size: clamp(2rem, 5vw, 5em);
+  font-size: clamp(1.5rem, 5vw, 5rem);
   text-align: center;
   z-index: 6;
+  padding: 0 1rem;
+  margin: 1rem 0;
 }
 section .title .notebook-grid {
   position: absolute;
   z-index: 5;
   width: 100%;
-  height: 30vh;
-  background-size: 50px 50px;
+  height: 100%;
+  max-height: 30vh;
+  background-size: min(50px, 10vw) min(50px, 10vw);
   background-color: transparent;
   background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2) 76%, transparent 77%, transparent);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 40%, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%), linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%);
@@ -539,37 +543,38 @@ section:nth-child(4) .becomeASponsorButton:active {
 section:nth-child(5) {
   display: flex;
   flex-direction: column;
-  padding-top: 4em;
-  height: 140vh;
+  padding-top: clamp(2em, 5vw, 4em);
+  height: auto;
+  min-height: 100vh;
 }
 section:nth-child(5) .connector-line {
   position: absolute;
-  top: 190em;
-  left: 0;
   width: 100%;
   height: auto;
   z-index: -1;
+  top: 191em;
+  left: 0;
 }
 section:nth-child(5) .cards-container {
   display: flex;
   flex-direction: column;
-  margin-top: 15em;
-  width: 100vw;
-  height: 100vh;
+  margin-top: clamp(5em, 10vh, 15em);
+  width: 100%;
+  height: auto;
+  min-height: 80vh;
   align-items: center;
   justify-content: space-evenly;
-  /* perspective: 800px; */
   pointer-events: auto;
+  padding: 1rem;
 }
-section:nth-child(5) .cards-container .first-card-layer {
-  width: inherit;
+section:nth-child(5) .cards-container .first-card-layer,
+section:nth-child(5) .cards-container .second-card-layer {
+  width: 100%;
   display: flex;
   justify-content: center;
-}
-section:nth-child(5) .cards-container .second-card-layer {
-  width: inherit;
-  justify-content: space-evenly;
-  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 section:nth-child(5) .cards-container .card {
   display: flex;
@@ -577,11 +582,12 @@ section:nth-child(5) .cards-container .card {
   align-items: center;
   flex-direction: column;
   user-select: none;
-  width: 17em;
-  height: 22em;
+  width: clamp(250px, 80vw, 17em);
+  height: clamp(300px, 80vh, 22em);
   will-change: transform;
   position: relative;
   overflow: visible;
+  margin: 1rem 0;
   border-radius: 1em;
   backdrop-filter: blur(10px);
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, rgba(52, 50, 202, 0.8) 92%);
@@ -604,7 +610,7 @@ section:nth-child(5) .cards-container .card .particle {
   border-radius: 50%;
   opacity: 1;
   transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-  pointer-events: none; /* Prevents interaction issues */
+  pointer-events: none;
 }
 section:nth-child(5) .cards-container .card .glow-effect {
   position: absolute;
@@ -613,9 +619,9 @@ section:nth-child(5) .cards-container .card .glow-effect {
   width: 100%;
   height: 100%;
   border-radius: 1em;
-  pointer-events: none; /* Prevents interference with mouse events */
+  pointer-events: none;
   transition: opacity 0.3s ease-out;
-  opacity: 0; /* Hidden by default */
+  opacity: 0;
 }
 section:nth-child(5) .cards-container .card .card-background {
   position: absolute;
@@ -639,25 +645,29 @@ section:nth-child(5) .cards-container .card img {
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 0) 100%);
 }
 section:nth-child(5) .cards-container .card h3 {
-  font-size: 1.2em;
+  font-size: clamp(0.9em, 3vw, 1.2em);
   z-index: 2;
   color: white;
+  text-align: center;
+  padding: 0 0.5rem;
 }
 section:nth-child(5) .cards-container .card p {
-  font-size: 1.1em;
+  font-size: clamp(0.8em, 2.5vw, 1.1em);
   font-family: "Overpass Mono", serif;
   z-index: 2;
   color: white;
+  text-align: center;
+  padding: 0 0.5rem;
 }
 section:nth-child(5) .meetTheTeamButton {
   display: block;
-  margin: auto;
+  margin: 2rem auto;
   z-index: 2;
   color: white;
   border: 2px solid #1d1bfa;
-  padding: 0.6em 1.6em;
+  padding: clamp(0.4em, 2vw, 0.6em) clamp(1em, 4vw, 1.6em);
   border-radius: 1.3em;
-  font-size: 1.3em;
+  font-size: clamp(1em, 3vw, 1.3em);
   font-family: "Overpass Mono", serif;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(29, 27, 250, 0.8);
@@ -692,7 +702,7 @@ section:nth-child(6) .title-container {
 section:nth-child(6) .title-container .title {
   display: flex;
   flex-direction: column;
-  width: inherit;
+  /* width: inherit; */
   height: 20em;
   align-items: center;
   pointer-events: auto;
@@ -823,76 +833,6 @@ section:nth-child(7) {
   align-items: center;
   padding-top: 7em;
   height: 120vh;
-}
-section:nth-child(7) footer {
-  margin-top: auto;
-  width: 100%;
-  height: 100vh;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  padding: 5rem 2vw;
-  position: relative;
-}
-section:nth-child(7) footer h3 {
-  font-weight: 500;
-  font-size: calc(0.6 * var(--m));
-  margin: 0;
-}
-section:nth-child(7) footer a {
-  text-decoration: none;
-  color: inherit;
-}
-section:nth-child(7) footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.8) 40%, rgb(0, 0, 0) 50%, rgb(0, 0, 0));
-  z-index: -7;
-}
-section:nth-child(7) footer .backdrop {
-  z-index: -5;
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  mask-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.8) 20%, rgb(0, 0, 0) 30%, rgb(0, 0, 0));
-  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.8) 20%, rgb(0, 0, 0) 30%, rgb(0, 0, 0));
-}
-section:nth-child(7) footer .col {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
-  width: 30%;
-  height: 27%;
-}
-section:nth-child(7) footer .col a > img {
-  height: calc(0.4 * var(--m));
-  object-fit: cover;
-}
-section:nth-child(7) footer .col2,
-section:nth-child(7) footer .col3 {
-  background-color: #121212;
-  border-radius: calc(0.5 * var(--m));
-}
-section:nth-child(7) .social {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 1rem;
-}
-section:nth-child(7) .social .link {
-  width: calc(0.8 * var(--m));
-  height: calc(0.8 * var(--m));
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: calc(0.1 * var(--m));
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 section:nth-child(7) .contact-container {
   position: absolute;
@@ -1055,9 +995,84 @@ section:nth-child(7) .contact-container .sendmessage-container button:active {
   border: 2px solid #fcfcfc;
   color: white;
 }
+section:nth-child(7) footer {
+  margin-top: auto;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 5rem 2vw;
+  position: relative;
+}
+section:nth-child(7) footer h3 {
+  font-weight: 500;
+  font-size: calc(0.6 * var(--m));
+  margin: 0;
+}
+section:nth-child(7) footer a {
+  text-decoration: none;
+  color: inherit;
+}
+section:nth-child(7) footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.8) 40%, rgb(0, 0, 0) 50%, rgb(0, 0, 0));
+  z-index: -7;
+}
+section:nth-child(7) footer .backdrop {
+  z-index: -5;
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  mask-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.8) 20%, rgb(0, 0, 0) 30%, rgb(0, 0, 0));
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.8) 20%, rgb(0, 0, 0) 30%, rgb(0, 0, 0));
+}
+section:nth-child(7) footer .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
+  width: 30%;
+  height: 27%;
+}
+section:nth-child(7) footer .col a > img {
+  height: calc(0.4 * var(--m));
+  object-fit: cover;
+}
+section:nth-child(7) footer .col2,
+section:nth-child(7) footer .col3 {
+  background-color: #121212;
+  border-radius: calc(0.5 * var(--m));
+}
+section:nth-child(7) footer .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+section:nth-child(7) footer .social .link {
+  width: calc(0.8 * var(--m));
+  height: calc(0.8 * var(--m));
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: calc(0.1 * var(--m));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Media Queries */
 @media (min-width: 1025px) {
+  section:nth-child(5) .cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   h1 {
     font-size: 8em;
     left: 50%;
@@ -1070,50 +1085,35 @@ section:nth-child(7) .contact-container .sendmessage-container button:active {
     white-space: nowrap;
   }
 }
-@media (max-width: 1024px) {
-  .navbar-container {
-    width: 95%;
-    padding: 0.8rem 1.5rem;
-  }
-  .navbar-right {
-    width: 100%;
-    max-width: 400px;
-  }
-  h3 {
-    font-size: 3em;
-    top: 60%;
-  }
-  h1 {
-    font-size: 6em;
-    top: 68%;
-  }
-}
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-  .navbar-right {
-    width: 100%;
-    max-width: 300px;
-    justify-content: center;
-    gap: 1rem;
-  }
-  h3 {
-    font-size: 2.5em;
-    top: 55%;
-  }
-  h1 {
-    font-size: 5em;
-    top: 62%;
-  }
-}
 @media (max-width: 480px) {
   .navbar-container {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 1em;
+    width: min-content;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section:nth-child(5) .connector-line {
+    display: none;
+  }
+  section:nth-child(5) section:nth-child(5) .card {
+    width: 90%;
+    max-width: 280px;
+    height: auto;
+    min-height: 280px;
+    margin-bottom: 2.5rem;
+  }
+  section:nth-child(5) .card img {
+    width: 60%;
+    height: 50%;
+  }
+  section:nth-child(5) .meetTheTeamButton {
+    padding: 0.4em 1em;
+    font-size: 1.6em;
+    margin: 1rem auto;
+  }
+  section:nth-child(5) .first-card-layer,
+  section:nth-child(5) .second-card-layer {
+    margin-bottom: 0;
   }
   h3 {
     font-size: 2em;
@@ -1127,9 +1127,174 @@ section:nth-child(7) .contact-container .sendmessage-container button:active {
     width: 95%;
     height: 20vh;
   }
+  section:nth-child(4) .sponsors-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section:nth-child(4) .sponsors-container .sponsor-card img {
+    width: 60%;
+    height: 50%;
+  }
+  section:nth-child(4) .sponsors-container .sponsor-card:nth-child(1) img {
+    margin-left: 0;
+  }
+  section:nth-child(4) .sponsors-container .sponsor-card:nth-child(2) img {
+    margin-right: 0;
+    margin-top: 0;
+  }
+  section:nth-child(4) .title h2,
+  section:nth-child(5) .title h2 {
+    font-size: 3.4em;
+    padding-top: 1em;
+  }
   h2 {
     font-size: 3em;
   }
 }
+/*
+@media (max-width: 1024px) {
+    .navbar-container {
+        width: 95%;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .navbar-right {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    h3 {
+        font-size: 3em;
+        top: 60%;
+    }
+
+    h1 {
+        font-size: 6em;
+        top: 68%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    section:nth-child(5) .first-card-layer,
+    section:nth-child(5) .second-card-layer {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .navbar-right {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    section:nth-child(5) .cards-container {
+        margin-top: 2em;
+    }
+
+    section:nth-child(5) .first-card-layer,
+    section:nth-child(5) .second-card-layer {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    section:nth-child(5) .connector-line {
+        display: none;
+    }
+
+    .title {
+        height: auto;
+        min-height: 8em;
+    }
+
+    .title h2 {
+        top: 0;
+    }
+
+    h3 {
+        font-size: 2.5em;
+        top: 55%;
+    }
+
+    h1 {
+        font-size: 5em;
+        top: 62%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 1em;
+    }
+    section:nth-child(5) .card {
+        width: 90%;
+        max-width: 280px;
+        height: auto;
+        min-height: 280px;
+        margin-bottom: 2.5rem;
+    }
+
+    section:nth-child(5) .card img {
+        width: 60%;
+        height: 50%;
+    }
+
+    section:nth-child(5) .meetTheTeamButton {
+        padding: 0.4em 1em;
+        font-size: 0.9em;
+        margin: 1rem auto;
+    }
+
+    section:nth-child(5) .first-card-layer,
+    section:nth-child(5) .second-card-layer {
+        margin-bottom: 0;
+    }
+
+    h3 {
+        font-size: 2em;
+        top: 50%;
+    }
+
+    h1 {
+        font-size: 4em;
+        top: 58%;
+    }
+
+    .notebook-grid {
+        width: 95%;
+        height: 20vh;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+}
+
+@media (hover: none) {
+    section:nth-child(5) .card:hover {
+        transform: none;
+    }
+
+    section:nth-child(5) .card:active {
+        transform: translateY(-0.3em) scale(1.02);
+    }
+
+    section:nth-child(5) .meetTheTeamButton:hover {
+        transform: none;
+    }
+} */
 
 /*# sourceMappingURL=styles.css.map */
