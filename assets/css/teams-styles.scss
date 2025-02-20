@@ -155,30 +155,6 @@ section {
                     transparent 77%,
                     transparent
                 );
-            /* background-image: linear-gradient(
-                    0deg,
-                    transparent 24%,
-                    rgba(255, 255, 255, 0.2) 25%,
-                    rgba(255, 255, 255, 0.2) 26%,
-                    transparent 27%,
-                    transparent 74%,
-                    rgba(255, 255, 255, 0.2) 75%,
-                    rgba(255, 255, 255, 0.2) 76%,
-                    transparent 77%,
-                    transparent
-                ),
-                linear-gradient(
-                    90deg,
-                    transparent 24%,
-                    rgba(255, 255, 255, 0.2) 25%,
-                    rgba(255, 255, 255, 0.2) 26%,
-                    transparent 27%,
-                    transparent 74%,
-                    rgba(255, 255, 255, 0.2) 75%,
-                    rgba(255, 255, 255, 0.2) 76%,
-                    transparent 77%,
-                    transparent
-                ); */
             mask-image:
                 linear-gradient(
                     to bottom,
@@ -216,20 +192,12 @@ section {
         padding-top: 4em;
         height: 300em;
 
-        .connector-line {
-            position: absolute;
-            top: 39em;
-            left: 0;
-            width: 100%;
-            height: auto;
-            z-index: -1;
-        }
         .cards-container {
             display: flex;
             flex-direction: column;
             margin-top: 17em;
             width: 100vw;
-            height: 333vh;
+            height: 368vh;
             align-items: center;
             justify-content: space-around;
             pointer-events: auto;
@@ -241,6 +209,7 @@ section {
                 align-items: center;
                 width: 100vw;
                 height: 4em;
+                margin: 2em 0;
 
                 background-image: radial-gradient(
                     circle,
@@ -312,6 +281,7 @@ section {
                     display: flex;
                     width: inherit;
                     justify-content: space-evenly;
+                    /* margin-bottom: 2.5em; */
                 }
                 .second-layer {
                     display: flex;
@@ -323,6 +293,62 @@ section {
                 width: inherit;
                 justify-content: space-evenly;
                 display: flex;
+            }
+
+            .sixth-card-layer {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* Two columns */
+                grid-template-rows: repeat(2, auto); /* Two rows */
+                gap: 1.5rem; /* Space between grid items */
+                width: 100%; /* Adjust width as needed */
+                max-width: 1200px; /* Set max width if necessary */
+                margin: auto; /* Center the grid */
+
+                & > div {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    padding: 1.5rem;
+                    border-radius: 10px;
+                    backdrop-filter: blur(10px);
+                    border: 1px solid rgba(255, 255, 255, 0.2);
+                    box-shadow:
+                        rgba(255, 255, 255, 0.2) 0px 2px 4px,
+                        rgba(255, 255, 255, 0.1) 0px 7px 13px -3px,
+                        rgba(255, 255, 255, 0.1) 0px -3px 0px inset;
+                }
+
+                .members-container {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                h3 {
+                    font-size: 1.8rem;
+                    color: white;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+                h6 {
+                    font-size: 1.2rem;
+                    color: #b0b0ff;
+                    margin-top: 1rem;
+                    margin-bottom: 0.5rem;
+                }
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    margin: 0;
+                }
+                li {
+                    color: white;
+                    font-size: 1rem;
+                    padding: 0.2rem 0;
+                }
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .sixth-card-layer {
+                    grid-template-columns: 1fr; /* Single column layout for small screens */
+                }
             }
 
             .card {
@@ -452,54 +478,6 @@ section {
                     color: white;
                     text-align: center;
                 }
-            }
-        }
-        .meetTheTeamButton {
-            display: block;
-            margin: auto;
-            z-index: 2;
-            color: white;
-            border: 2px solid #1d1bfa;
-            padding: 0.6em 1.6em;
-            border-radius: 1.3em;
-            font-size: 1.3em;
-            font-family: "Overpass Mono", serif;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(29, 27, 250, 0.8);
-            user-select: none;
-            box-shadow:
-                rgba(52, 50, 202, 0.4) 0px 5px,
-                rgba(52, 50, 202, 0.3) 0px 10px,
-                rgba(52, 50, 202, 0.2) 0px 15px,
-                rgba(52, 50, 202, 0.1) 0px 20px,
-                rgba(52, 50, 202, 0.05) 0px 25px;
-
-            background-size: 5px 5px;
-            background-image: radial-gradient(
-                circle,
-                rgba(52, 50, 202, 0.4) 1px,
-                rgba(0, 0, 0, 0) 1px
-            );
-
-            transition:
-                transform 0.25s ease-in-out,
-                box-shadow 0.3s ease-in-out;
-
-            &:hover {
-                transform: scale(1.1);
-            }
-
-            &:active {
-                translate: 0 3px;
-                transform: translateY(3px);
-                filter: brightness(0.9);
-                box-shadow:
-                    rgba(255, 255, 255, 0.4) 0px 2px 4px,
-                    rgba(255, 255, 255, 0.3) 0px 7px 13px -3px,
-                    rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
-                background-color: rgba(29, 27, 250, 0.8);
-                border: 2px solid #fcfcfc;
-                color: white;
             }
         }
     } /*Teams Section*/
