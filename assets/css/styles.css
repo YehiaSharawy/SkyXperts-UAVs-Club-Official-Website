@@ -96,7 +96,6 @@ section {
   /*Header Section*/
   /*Goals & Objectives Section*/
   /*Sponsors Section*/
-  /*Teams Section*/
   /*Blogs Section*/
   /*Contact Us Section*/
 }
@@ -248,12 +247,14 @@ section:nth-child(3) .hollow-text {
   transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
 section:nth-child(3) .hollow-text:nth-child(1) {
-  left: 2em;
+  left: 6em;
   top: 12.8em;
 }
 section:nth-child(3) .hollow-text:nth-child(4) {
-  left: 11.7em;
+  /* left: 11.7em; */
   top: 17.3em;
+  left: 7em;
+  /* margin-top: 3.3em; */
 }
 section:nth-child(3) .hollow-text.visible {
   opacity: 1;
@@ -365,12 +366,28 @@ section:nth-child(3) .sponsor-carousel ul {
   will-change: transform;
   animation: scroll 12s linear infinite;
 }
+section:nth-child(3) .sponsor-carousel ul li {
+  text-transform: uppercase;
+}
 section:nth-child(4) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 40em;
-  padding-top: 6em;
+  /* height: 40em; */
+  padding-top: 7em;
+  /* .title {
+      position: relative;
+      .notebook-grid {
+          width: 100vw;
+          height: 25vh;
+          background-size: 10px 10px;
+          background-image: radial-gradient(
+              circle,
+              rgba(255, 255, 255, 0.4) 1px,
+              rgba(0, 0, 0, 0) 1px
+          );
+      }
+  } */
   /* @keyframes morphBlob {
       0% {
           d: path(
@@ -459,14 +476,23 @@ section:nth-child(4) {
       rgba(0, 0, 0, 0) 100%
   ); */
 }
-section:nth-child(4) .title {
-  position: relative;
+section:nth-child(4) h2 {
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 1em;
+  z-index: 2;
 }
-section:nth-child(4) .title .notebook-grid {
-  width: 100vw;
-  height: 25vh;
-  background-size: 10px 10px;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4) 1px, rgba(0, 0, 0, 0) 1px);
+section:nth-child(4) p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5em;
+  text-align: center;
+  width: 40.5em;
+  z-index: 2;
+  /* margin-bottom: 1em; */
+}
+section:nth-child(4) p:nth-child(6) {
+  width: 38em;
 }
 section:nth-child(4) .sponsors-background {
   position: absolute;
@@ -483,11 +509,12 @@ section:nth-child(4) .sponsors-background {
 }
 section:nth-child(4) .sponsors-container {
   display: flex;
+  /* flex-direction: column; */
   z-index: 2;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 20em;
+  height: 14.5em;
 }
 section:nth-child(4) .sponsors-container .sponsor-card {
   display: flex;
@@ -512,7 +539,7 @@ section:nth-child(4) .sponsors-container .sponsor-card:nth-child(2) img {
 }
 section:nth-child(4) .becomeASponsorButton {
   display: block;
-  margin: auto;
+  margin: 3em 0 0 0;
   z-index: 2;
   color: white;
   border: 2px solid #1d1bfa;
@@ -542,164 +569,16 @@ section:nth-child(4) .becomeASponsorButton:active {
 }
 section:nth-child(5) {
   display: flex;
-  flex-direction: column;
-  padding-top: clamp(2em, 5vw, 4em);
-  height: auto;
-  min-height: 100vh;
+  height: 75vh;
 }
-section:nth-child(5) .connector-line {
-  position: absolute;
+section:nth-child(5) .title-container {
   width: 100%;
-  height: auto;
-  z-index: -1;
-  top: 191em;
-  left: 0;
-}
-section:nth-child(5) .cards-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: clamp(5em, 10vh, 15em);
-  width: 100%;
-  height: auto;
-  min-height: 80vh;
-  align-items: center;
-  justify-content: space-evenly;
-  pointer-events: auto;
-  padding: 1rem;
-}
-section:nth-child(5) .cards-container .first-card-layer,
-section:nth-child(5) .cards-container .second-card-layer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-section:nth-child(5) .cards-container .card {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  user-select: none;
-  width: clamp(250px, 80vw, 17em);
-  height: clamp(300px, 80vh, 22em);
-  will-change: transform;
-  position: relative;
-  overflow: visible;
-  margin: 1rem 0;
-  border-radius: 1em;
-  backdrop-filter: blur(10px);
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, rgba(52, 50, 202, 0.8) 92%);
-  box-shadow: rgba(52, 50, 202, 0.4) 0px 5px, rgba(52, 50, 202, 0.3) 0px 10px, rgba(52, 50, 202, 0.2) 0px 15px, rgba(52, 50, 202, 0.1) 0px 20px, rgba(52, 50, 202, 0.05) 0px 25px;
-  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
-  /* &:hover {
-      cursor: pointer;
-      transform: translateY(-10px);
-  } */
-}
-section:nth-child(5) .cards-container .card:hover {
-  cursor: pointer;
-  transform: translateY(-0.7em) scale(1.05);
-}
-section:nth-child(5) .cards-container .card .particle {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: #ff3131;
-  border-radius: 50%;
-  opacity: 1;
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-  pointer-events: none;
-}
-section:nth-child(5) .cards-container .card .glow-effect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 1em;
-  pointer-events: none;
-  transition: opacity 0.3s ease-out;
-  opacity: 0;
-}
-section:nth-child(5) .cards-container .card .card-background {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  content: "";
-  background-size: 5px 5px;
-  background-image: radial-gradient(circle, rgba(52, 50, 202, 0.4) 1px, rgba(0, 0, 0, 0) 1px);
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 15%, rgb(0, 0, 0) 100%);
-}
-section:nth-child(5) .cards-container .card img {
-  width: 70%;
-  height: 60%;
-  object-fit: cover;
-  z-index: 2;
-  border-radius: 1.2em 1.2em 0 0;
-  filter: brightness(1);
-  box-shadow: rgba(52, 50, 202, 0.4) 0px 5px, rgba(52, 50, 202, 0.3) 0px 10px, rgba(52, 50, 202, 0.2) 0px 15px, rgba(52, 50, 202, 0.1) 0px 20px, rgba(52, 50, 202, 0.05) 0px 25px;
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 40%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 0) 100%);
-}
-section:nth-child(5) .cards-container .card h3 {
-  font-size: clamp(0.9em, 3vw, 1.2em);
-  z-index: 2;
-  color: white;
-  text-align: center;
-  padding: 0 0.5rem;
-}
-section:nth-child(5) .cards-container .card p {
-  font-size: clamp(0.8em, 2.5vw, 1.1em);
-  font-family: "Overpass Mono", serif;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  padding: 0 0.5rem;
-}
-section:nth-child(5) .meetTheTeamButton {
-  display: block;
-  margin: 2rem auto;
-  z-index: 2;
-  color: white;
-  border: 2px solid #1d1bfa;
-  padding: clamp(0.4em, 2vw, 0.6em) clamp(1em, 4vw, 1.6em);
-  border-radius: 1.3em;
-  font-size: clamp(1em, 3vw, 1.3em);
-  font-family: "Overpass Mono", serif;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 4px rgba(29, 27, 250, 0.8);
-  user-select: none;
-  box-shadow: rgba(52, 50, 202, 0.4) 0px 5px, rgba(52, 50, 202, 0.3) 0px 10px, rgba(52, 50, 202, 0.2) 0px 15px, rgba(52, 50, 202, 0.1) 0px 20px, rgba(52, 50, 202, 0.05) 0px 25px;
-  background-size: 5px 5px;
-  background-image: radial-gradient(circle, rgba(52, 50, 202, 0.4) 1px, rgba(0, 0, 0, 0) 1px);
-  transition: transform 0.25s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-section:nth-child(5) .meetTheTeamButton:hover {
-  transform: scale(1.1);
-}
-section:nth-child(5) .meetTheTeamButton:active {
-  translate: 0 3px;
-  transform: translateY(3px);
-  filter: brightness(0.9);
-  box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(255, 255, 255, 0.2) 0px -3px 0px inset;
-  background-color: rgba(29, 27, 250, 0.8);
-  border: 2px solid #fcfcfc;
-  color: white;
-}
-section:nth-child(6) {
-  display: flex;
-}
-section:nth-child(6) .title-container {
-  width: 50%;
-  height: 100vh;
+  height: 36vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-section:nth-child(6) .title-container .title {
+section:nth-child(5) .title-container .title {
   display: flex;
   flex-direction: column;
   /* width: inherit; */
@@ -707,26 +586,30 @@ section:nth-child(6) .title-container .title {
   align-items: center;
   pointer-events: auto;
 }
-section:nth-child(6) .title-container .title h2 {
+section:nth-child(5) .title-container .title h2 {
   position: absolute;
   top: 0%;
   color: #f0f0f0;
   font-size: clamp(2rem, 5vw, 5em);
 }
-section:nth-child(6) .title-container .title p {
+section:nth-child(5) .title-container .title p {
   color: #f0f0f0;
   text-align: center;
   font-size: clamp(1rem, 1.5vw, 1.5em);
   font-family: "Overpass Mono", serif;
 }
-section:nth-child(6) .title-container .title img {
+section:nth-child(5) .title-container .title a:nth-child(3) {
   position: absolute;
   transform: translateY(8em);
+}
+section:nth-child(5) .title-container .title img {
+  /* position: absolute;
+  transform: translateY(8em); */
   width: 10em;
   height: 10em;
   z-index: -1;
 }
-section:nth-child(6) .title-container .title .blogsButton {
+section:nth-child(5) .title-container .title .blogsButton {
   display: block;
   position: absolute;
   top: 25rem;
@@ -743,10 +626,10 @@ section:nth-child(6) .title-container .title .blogsButton {
   background-image: radial-gradient(circle, rgba(52, 50, 202, 0.4) 1px, rgba(0, 0, 0, 0) 1px);
   transition: transform 0.25s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-section:nth-child(6) .title-container .title .blogsButton:hover {
+section:nth-child(5) .title-container .title .blogsButton:hover {
   transform: scale(1.1);
 }
-section:nth-child(6) .title-container .title .blogsButton:active {
+section:nth-child(5) .title-container .title .blogsButton:active {
   translate: 0 3px;
   transform: translateY(3px);
   filter: brightness(0.9);
@@ -755,7 +638,38 @@ section:nth-child(6) .title-container .title .blogsButton:active {
   border: 2px solid #fcfcfc;
   color: white;
 }
-section:nth-child(6) .blogs-container {
+section:nth-child(5) .updatecards-container {
+  /* position: absolute; */
+  /* left: 0; */
+}
+section:nth-child(5) .updatecards-container .updatecards-preview-img {
+  /* position: relative; */
+  width: 25%;
+  height: 20em;
+  position: absolute;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2em;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+section:nth-child(5) .updatecards-container .updatecards-preview-img:nth-child(1) {
+  transform: translateY(15em) translateX(5em) rotate(-10deg);
+  background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg");
+}
+section:nth-child(5) .updatecards-container .updatecards-preview-img:nth-child(2) {
+  transform: translateY(15em) translateX(62em) rotate(10deg);
+  background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/team-imgs/events/rally/skyxpert-rallyteam.jpeg");
+}
+section:nth-child(5) .updatecards-container .updatecards-preview-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 2em;
+}
+section:nth-child(5) .blogs-container {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -765,76 +679,102 @@ section:nth-child(6) .blogs-container {
   margin-top: 6em;
   align-items: center;
   justify-content: space-evenly;
+  /* .blog-container {
+      display: flex;
+      height: 15rem;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 1);
+      overflow: hidden;
+      border-radius: 2em 1em 1em 2em;
+      box-shadow:
+          rgba(255, 255, 255, 0.4) 5px 0px,
+          rgba(255, 255, 255, 0.3) 10px 0px,
+          rgba(255, 255, 255, 0.2) 15px 0px,
+          rgba(255, 255, 255, 0.1) 20px 0px,
+          rgba(255, 255, 255, 0.05) 25px 0px;
+
+      .blog-background {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          content: "";
+          background-size: 5px 5px;
+          background-image: radial-gradient(
+              circle,
+              rgba(52, 50, 202, 0.05) 1px,
+              rgba(0, 0, 0, 0) 1px
+          );
+      }
+
+      .blog-preview-img {
+          width: 40%;
+          height: 100%;
+          z-index: 2;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 0 2em 2em 0;
+          box-shadow:
+              rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+              rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+      }
+
+      .blog-header {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          max-width: 60%;
+          height: 100%;
+          padding: 0 1em 1em 1em;
+          z-index: 2;
+
+          h6 {
+              color: #3432ca;
+              font-size: 1em;
+              margin-top: 1.5em;
+          }
+          p {
+              color: #a3a3a3;
+              text-align: justify;
+
+              &:nth-child(4) {
+                  text-align: right;
+              }
+          }
+      }
+
+      &:nth-child(1) {
+          .blog-preview-img {
+              background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg");
+          }
+      }
+      &:nth-child(2) {
+          .blog-preview-img {
+              background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/team-imgs/events/rally/skyxpert-rallyteam.jpeg");
+          }
+      }
+      &:nth-child(3) {
+          .blog-preview-img {
+              background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team2.jpeg");
+          }
+          mask-image: linear-gradient(
+              to top,
+              rgba(0, 0, 0, 0) 0%,
+              rgba(0, 0, 0, 0) 50%,
+              rgba(0, 0, 0, 1) 100%
+          );
+      }
+  } */
 }
-section:nth-child(6) .blogs-container .blog-container {
-  display: flex;
-  height: 15rem;
-  backdrop-filter: blur(10px);
-  background-color: rgb(255, 255, 255);
-  overflow: hidden;
-  border-radius: 2em 1em 1em 2em;
-  box-shadow: rgba(255, 255, 255, 0.4) 5px 0px, rgba(255, 255, 255, 0.3) 10px 0px, rgba(255, 255, 255, 0.2) 15px 0px, rgba(255, 255, 255, 0.1) 20px 0px, rgba(255, 255, 255, 0.05) 25px 0px;
-}
-section:nth-child(6) .blogs-container .blog-container .blog-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  content: "";
-  background-size: 5px 5px;
-  background-image: radial-gradient(circle, rgba(52, 50, 202, 0.05) 1px, rgba(0, 0, 0, 0) 1px);
-}
-section:nth-child(6) .blogs-container .blog-container .blog-preview-img {
-  width: 40%;
-  height: 100%;
-  z-index: 2;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 0 2em 2em 0;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-}
-section:nth-child(6) .blogs-container .blog-container .blog-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  max-width: 60%;
-  height: 100%;
-  padding: 0 1em 1em 1em;
-  z-index: 2;
-}
-section:nth-child(6) .blogs-container .blog-container .blog-header h6 {
-  color: #3432ca;
-  font-size: 1em;
-  margin-top: 1.5em;
-}
-section:nth-child(6) .blogs-container .blog-container .blog-header p {
-  color: #a3a3a3;
-  text-align: justify;
-}
-section:nth-child(6) .blogs-container .blog-container .blog-header p:nth-child(4) {
-  text-align: right;
-}
-section:nth-child(6) .blogs-container .blog-container:nth-child(1) .blog-preview-img {
-  background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team.jpg");
-}
-section:nth-child(6) .blogs-container .blog-container:nth-child(2) .blog-preview-img {
-  background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/team-imgs/events/rally/skyxpert-rallyteam.jpeg");
-}
-section:nth-child(6) .blogs-container .blog-container:nth-child(3) {
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 100%);
-}
-section:nth-child(6) .blogs-container .blog-container:nth-child(3) .blog-preview-img {
-  background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/team-imgs/events/alamein-airshow/skyxpert-team2.jpeg");
-}
-section:nth-child(7) {
+section:nth-child(6) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 7em;
-  height: 120vh;
+  /* padding-top: 7em; */
+  height: 85vh;
 }
-section:nth-child(7) .contact-container {
+section:nth-child(6) .contact-container {
   position: absolute;
   z-index: 1;
   overflow: hidden;
@@ -846,7 +786,7 @@ section:nth-child(7) .contact-container {
   background-image: linear-gradient(140deg, rgba(255, 255, 255, 0) 35%, rgba(52, 50, 202, 0.8) 100%);
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-section:nth-child(7) .contact-container .contact-background {
+section:nth-child(6) .contact-container .contact-background {
   position: absolute;
   left: 0;
   width: 100%;
@@ -857,72 +797,72 @@ section:nth-child(7) .contact-container .contact-background {
   background-image: linear-gradient(0deg, transparent 24%, rgba(52, 50, 202, 0.2) 25%, rgba(52, 50, 202, 0.2) 26%, transparent 27%, transparent 74%, rgba(52, 50, 202, 0.2) 75%, rgba(52, 50, 202, 0.2) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(52, 50, 202, 0.2) 25%, rgba(52, 50, 202, 0.2) 26%, transparent 27%, transparent 74%, rgba(52, 50, 202, 0.2) 75%, rgba(52, 50, 202, 0.2) 76%, transparent 77%, transparent);
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 15%, rgb(0, 0, 0) 100%);
 }
-section:nth-child(7) .contact-container .reachout-container {
+section:nth-child(6) .contact-container .reachout-container {
   width: 50%;
   padding: 2em 0 0 2em;
 }
-section:nth-child(7) .contact-container .reachout-container .reachout-title {
+section:nth-child(6) .contact-container .reachout-container .reachout-title {
   color: white;
   font-size: 1.7em;
 }
-section:nth-child(7) .contact-container .reachout-container .reachout-information {
+section:nth-child(6) .contact-container .reachout-container .reachout-information {
   color: white;
   display: flex;
   margin-top: 0.5em;
 }
-section:nth-child(7) .contact-container .reachout-container .reachout-information h4 {
+section:nth-child(6) .contact-container .reachout-container .reachout-information h4 {
   font-size: 1.3em;
 }
-section:nth-child(7) .contact-container .reachout-container .reachout-information p,
-section:nth-child(7) .contact-container .reachout-container .reachout-information a {
+section:nth-child(6) .contact-container .reachout-container .reachout-information p,
+section:nth-child(6) .contact-container .reachout-container .reachout-information a {
   color: #a3a3a3;
   font-family: "Overpass Mono", serif;
   margin-top: 0.5em;
 }
-section:nth-child(7) .contact-container .reachout-container .reachout-information .support .social .link {
+section:nth-child(6) .contact-container .reachout-container .reachout-information .support .social .link {
   background-color: rgba(255, 255, 255, 0);
   width: 1.8em;
   height: 1.8em;
 }
-section:nth-child(7) .contact-container .reachout-container .reachout-information .support .social .link img {
+section:nth-child(6) .contact-container .reachout-container .reachout-information .support .social .link img {
   width: 1.8em;
   height: 1.8em;
 }
-section:nth-child(7) .contact-container .reachout-container .reachout-map {
+section:nth-child(6) .contact-container .reachout-container .reachout-map {
   position: absolute;
   margin-top: 1em;
   width: 100%;
   max-width: 503px;
   aspect-ratio: 16/9;
 }
-section:nth-child(7) .contact-container .reachout-container .reachout-map iframe {
+section:nth-child(6) .contact-container .reachout-container .reachout-map iframe {
   z-index: 1;
   border-radius: 1em;
   width: 100%;
   height: 100%;
 }
-section:nth-child(7) .contact-container .sendmessage-container {
+section:nth-child(6) .contact-container .sendmessage-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
   padding: 2em 0 0 0;
 }
-section:nth-child(7) .contact-container .sendmessage-container .sendmessage-title {
+section:nth-child(6) .contact-container .sendmessage-container .sendmessage-title {
   color: white;
   font-size: 1.7em;
 }
-section:nth-child(7) .contact-container .sendmessage-container .sendmessage-form {
+section:nth-child(6) .contact-container .sendmessage-container .sendmessage-form {
   width: 85%;
   margin-top: 1em;
 }
-section:nth-child(7) .contact-container .sendmessage-container form {
+section:nth-child(6) .contact-container .sendmessage-container form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 26em;
 }
-section:nth-child(7) .contact-container .sendmessage-container input {
+section:nth-child(6) .contact-container .sendmessage-container input {
   width: 100%;
   border-radius: 1em;
   padding: 1em;
@@ -933,23 +873,23 @@ section:nth-child(7) .contact-container .sendmessage-container input {
   border: 2px solid white;
   backdrop-filter: blur(5px);
 }
-section:nth-child(7) .contact-container .sendmessage-container .left-cell,
-section:nth-child(7) .contact-container .sendmessage-container .right-cell {
+section:nth-child(6) .contact-container .sendmessage-container .left-cell,
+section:nth-child(6) .contact-container .sendmessage-container .right-cell {
   width: 13em;
 }
-section:nth-child(7) .contact-container .sendmessage-container .first-group-form-layer {
+section:nth-child(6) .contact-container .sendmessage-container .first-group-form-layer {
   display: flex;
   justify-content: space-between;
 }
-section:nth-child(7) .contact-container .sendmessage-container .second-group-form-layer {
+section:nth-child(6) .contact-container .sendmessage-container .second-group-form-layer {
   display: flex;
   justify-content: space-between;
 }
-section:nth-child(7) .contact-container .sendmessage-container .last-form-layer {
+section:nth-child(6) .contact-container .sendmessage-container .last-form-layer {
   display: flex;
   flex-direction: column;
 }
-section:nth-child(7) .contact-container .sendmessage-container .last-form-layer textarea {
+section:nth-child(6) .contact-container .sendmessage-container .last-form-layer textarea {
   width: 100%;
   height: 6em;
   border-radius: 1em;
@@ -962,7 +902,7 @@ section:nth-child(7) .contact-container .sendmessage-container .last-form-layer 
   border: 2px solid white;
   backdrop-filter: blur(5px);
 }
-section:nth-child(7) .contact-container .sendmessage-container button {
+section:nth-child(6) .contact-container .sendmessage-container button {
   display: block;
   z-index: 2;
   color: white;
@@ -980,13 +920,13 @@ section:nth-child(7) .contact-container .sendmessage-container button {
   background-image: radial-gradient(circle, rgba(52, 50, 202, 0.4) 1px, rgba(0, 0, 0, 0) 1px);
   transition: transform 0.25s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-section:nth-child(7) .contact-container .sendmessage-container button img {
+section:nth-child(6) .contact-container .sendmessage-container button img {
   width: 1.4em;
 }
-section:nth-child(7) .contact-container .sendmessage-container button:hover {
+section:nth-child(6) .contact-container .sendmessage-container button:hover {
   transform: scale(1.03);
 }
-section:nth-child(7) .contact-container .sendmessage-container button:active {
+section:nth-child(6) .contact-container .sendmessage-container button:active {
   translate: 0 3px;
   transform: translateY(3px);
   filter: brightness(0.9);
@@ -995,7 +935,7 @@ section:nth-child(7) .contact-container .sendmessage-container button:active {
   border: 2px solid #fcfcfc;
   color: white;
 }
-section:nth-child(7) footer {
+section:nth-child(6) footer {
   margin-top: auto;
   width: 100%;
   height: 100vh;
@@ -1007,23 +947,23 @@ section:nth-child(7) footer {
   padding: 5rem 2vw;
   position: relative;
 }
-section:nth-child(7) footer h3 {
+section:nth-child(6) footer h3 {
   font-weight: 500;
   font-size: calc(0.6 * var(--m));
   margin: 0;
 }
-section:nth-child(7) footer a {
+section:nth-child(6) footer a {
   text-decoration: none;
   color: inherit;
 }
-section:nth-child(7) footer::before {
+section:nth-child(6) footer::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0.3) 20%, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.8) 40%, rgb(0, 0, 0) 50%, rgb(0, 0, 0));
   z-index: -7;
 }
-section:nth-child(7) footer .backdrop {
+section:nth-child(6) footer .backdrop {
   z-index: -5;
   position: absolute;
   inset: 0;
@@ -1032,38 +972,27 @@ section:nth-child(7) footer .backdrop {
   mask-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.8) 20%, rgb(0, 0, 0) 30%, rgb(0, 0, 0));
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.8) 20%, rgb(0, 0, 0) 30%, rgb(0, 0, 0));
 }
-section:nth-child(7) footer .col {
+section:nth-child(6) footer .col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
+  /* padding: calc(0.3 * var(--m)) calc(0.8 * var(--m)); */
   width: 30%;
-  height: 27%;
+  height: 10%;
 }
-section:nth-child(7) footer .col a > img {
+section:nth-child(6) footer .col a > img {
   height: calc(0.4 * var(--m));
   object-fit: cover;
 }
-section:nth-child(7) footer .col2,
-section:nth-child(7) footer .col3 {
+section:nth-child(6) footer .col p {
+  margin-top: 1.5em;
+  text-align: center;
+}
+section:nth-child(6) footer .col2,
+section:nth-child(6) footer .col3 {
   background-color: #121212;
   border-radius: calc(0.5 * var(--m));
-}
-section:nth-child(7) footer .social {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 1rem;
-}
-section:nth-child(7) footer .social .link {
-  width: calc(0.8 * var(--m));
-  height: calc(0.8 * var(--m));
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: calc(0.1 * var(--m));
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Media Queries */

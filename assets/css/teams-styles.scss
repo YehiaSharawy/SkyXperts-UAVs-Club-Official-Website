@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Overpass+Mono:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Share+Tech+Mono&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+:root {
+    --m: 4rem;
 }
 html {
     scroll-behavior: smooth;
@@ -472,11 +475,114 @@ section {
                     color: white;
                 }
                 p {
-                    font-size: 1.1em;
-                    font-family: "Overpass Mono", serif;
+                    font-size: 1.2em;
+                    font-family: "Share Tech Mono", serif;
                     z-index: 2;
                     color: white;
                     text-align: center;
+                }
+            }
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            height: 100vh;
+            color: white;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            padding: 5rem 2vw;
+            position: relative;
+
+            h3 {
+                font-weight: 500;
+                font-size: calc(0.6 * var(--m));
+                margin: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                    rgba(0, 0, 0, 0) 5%,
+                    rgba(0, 0, 0, 0.3) 20%,
+                    rgba(0, 0, 0, 0.6) 30%,
+                    rgba(0, 0, 0, 0.8) 40%,
+                    rgba(0, 0, 0, 1) 50%,
+                    rgb(0, 0, 0)
+                );
+                z-index: -7;
+            }
+
+            .backdrop {
+                z-index: -5;
+                position: absolute;
+                inset: 0;
+
+                backdrop-filter: blur(40px);
+                -webkit-backdrop-filter: blur(40px);
+
+                mask-image: linear-gradient(
+                    rgba(0, 0, 0, 0),
+                    rgba(0, 0, 0, 0.5) 10%,
+                    rgba(0, 0, 0, 0.8) 20%,
+                    rgba(0, 0, 0, 1) 30%,
+                    rgb(0, 0, 0)
+                );
+
+                -webkit-mask-image: linear-gradient(
+                    rgba(0, 0, 0, 0),
+                    rgba(0, 0, 0, 0.5) 10%,
+                    rgba(0, 0, 0, 0.8) 20%,
+                    rgba(0, 0, 0, 1) 30%,
+                    rgb(0, 0, 0)
+                );
+            }
+
+            .col {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
+                width: 30%;
+                height: 27%;
+
+                a > img {
+                    height: calc(0.4 * var(--m));
+                    object-fit: cover;
+                }
+            }
+
+            .col2,
+            .col3 {
+                background-color: #121212;
+                border-radius: calc(0.5 * var(--m));
+            }
+            .social {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 1rem;
+
+                .link {
+                    width: calc(0.8 * var(--m));
+                    height: calc(0.8 * var(--m));
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border-radius: calc(0.1 * var(--m));
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }
