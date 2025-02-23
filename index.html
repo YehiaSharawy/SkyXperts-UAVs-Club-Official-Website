@@ -15,17 +15,63 @@
                     class="navbar-left"
                 />
             </a>
-            <ul class="navbar-right">
-                <li><a href="#mission">Mission & Vision</a></li>
-                <li><a href="#sponsors">Sponsorships</a></li>
-                <li><a href="teams.html">Team</a></li>
-                <li><a href="#blogs">Blogs</a></li>
-                <li><a href="#contactus">Contact</a></li>
-            </ul>
+            <div class="navbar-right">
+                <ul class="links">
+                    <li><a href="#mission">Mission & Vision</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                    <li><a href="teams.html">Team</a></li>
+                    <li><a href="#updates">Updates</a></li>
+                    <li><a href="#contactus">Contact</a></li>
+                </ul>
+
+                <!-- Sidebar Button (For Small Screens) -->
+                <label class="open-sidebar-button" for="sidebar-active">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="32px"
+                        viewBox="0 -960 960 960"
+                        width="32px"
+                        fill="#f0f0f0"
+                    >
+                        <path
+                            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                        />
+                    </svg>
+                </label>
+            </div>
+
+            <!-- Sidebar (Hidden by Default) -->
+            <input type="checkbox" id="sidebar-active" />
+            <div class="links-container">
+                <!-- Close Sidebar Button -->
+                <label class="close-sidebar-button" for="sidebar-active">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="32px"
+                        viewBox="0 -960 960 960"
+                        width="32px"
+                        fill="#e8eaed"
+                    >
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                        />
+                    </svg>
+                </label>
+
+                <!-- Sidebar Links -->
+                <ul class="links">
+                    <li><a href="#mission">Mission & Vision</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                    <li><a href="teams.html">Team</a></li>
+                    <li><a href="#updates">Updates</a></li>
+                    <li><a href="#contactus">Contact</a></li>
+                </ul>
+            </div>
         </nav>
+
         <section id="home">
             <div class="image"></div>
-            <div class="solid-color"></div>
+            <!-- <div class="solid-color"></div> -->
             <h1>Sky<span id="red">X</span>perts UAVs Club</h1>
             <h6>
                 A project by students of the Arab Academy for Science and
@@ -177,13 +223,13 @@
                     />
                 </span>
             </div>
-            <h2>Interested In Sponsoring Us</h2>
+            <h2>Interested In Sponsoring Us ?</h2>
             <p>
                 SkyXperts UAVs Club thrives on innovation in autonomous UAV
                 systems, made possible by our sponsors. Your support drives our
                 research, competitions, and future engineers. Partnering with us
                 means gaining aerospace visibility and shaping cutting-edge
-                technology. Interested?
+                technology.
             </p>
             <a href="#contactus" class="becomeASponsorButton"
                 >Become A Sponsor</a
@@ -259,7 +305,9 @@
                             alt=""
                             loading="lazy"
                     /></a>
-                    <a href="blogs.html" class="blogsButton">Learn More</a>
+                    <a href="https://suas-competition.org/" class="blogsButton"
+                        >Learn More</a
+                    >
                 </span>
             </div>
             <div class="updatecards-container">
@@ -452,49 +500,10 @@
                             src="./assets/imgs/logos/skyxpert-long-logo.png"
                             loading="lazy"
                     /></a>
-                    <!-- <div class="social">
-                        <a
-                            href="https://www.linkedin.com/company/skyxperts-co"
-                            target="_blank"
-                            class="link"
-                            ><img
-                                src="./assets/imgs/logos/socialmedia/linkedin-icon.png"
-                                alt=""
-                                loading="lazy"
-                        /></a>
-                        <a
-                            href="https://www.facebook.com/profile.php?id=100093202966212&mibextid=b06tZ0"
-                            target="_blank"
-                            class="link"
-                            ><img
-                                src="./assets/imgs/logos/socialmedia/facebook-icon.png"
-                                alt=""
-                                loading="lazy"
-                        /></a>
-                        <a
-                            href="https://www.instagram.com/skyxperts.co"
-                            target="_blank"
-                            class="link"
-                            ><img
-                                src="./assets/imgs/logos/socialmedia/instagram-icon.png"
-                                alt=""
-                                loading="lazy"
-                        /></a>
-                    </div> -->
                     <p style="color: #818181; font-size: smaller">
                         2025 SkyXperts UAVs Club © All Rights Reserved
                     </p>
                 </div>
-                <!-- <div class="col col2">
-                    <a href="#mission">Our Mission</a>
-                    <a href="#blogs">Our Blog</a>
-                    <a href="#team">Meet The Team</a>
-                </div>
-                <div class="col col3">
-                    <a href="#contactus">Join Our Team</a>
-                    <a href="#contactus">Be Our Sponsor</a>
-                    <a href="#contactus">Contact Us</a>
-                </div> -->
                 <div class="backdrop"></div>
             </footer>
         </section>
