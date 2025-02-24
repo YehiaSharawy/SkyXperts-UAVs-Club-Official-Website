@@ -17,12 +17,11 @@ $font-mono: "Overpass Mono", serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-overflow-scrolling: touch;
+    -webkit-scroll-behavior: smooth;
 }
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    overflow-y: auto;
 }
 body {
     display: flex;
@@ -34,8 +33,6 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
     overflow-x: hidden;
-    overflow-y: auto;
-    height: 100dvh;
 
     a {
         text-decoration: none;
