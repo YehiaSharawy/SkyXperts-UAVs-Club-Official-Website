@@ -161,6 +161,7 @@ body {
         right: -100%;
         width: 250px;
         height: 100vh;
+        height: 100dvh;
         /* background: rgba(0, 0, 0, 0.5); */
         background-image: linear-gradient(
             140deg,
@@ -447,6 +448,7 @@ section {
 
         @media (width <= 55em) {
             height: 110dvh;
+            height: 110vh;
         }
 
         &::before {
@@ -670,6 +672,7 @@ section {
 
         @media (width <= 55em) {
             height: 121dvh;
+            height: 121vh;
         }
 
         h2 {
@@ -822,11 +825,13 @@ section {
     &:nth-child(5) {
         display: flex;
         height: 75vh;
+        height: 75dvh;
         padding-top: 8rem;
 
         .title-container {
             width: 100%;
             height: 36vh;
+            height: 36dvh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -1030,18 +1035,23 @@ section {
         flex-direction: column;
         align-items: center;
         height: 170vh;
+        height: 170dvh;
 
         @media (width >= 37em) and (width <= 42em) {
             height: 161.5vh;
+            height: 161.5dvh;
         }
         @media (width >= 42em) and (width <= 48em) {
             height: 165vh;
+            height: 165dvh;
         }
         @media (width >= 48em) and (width <= 55em) {
             height: 170vh;
+            height: 170dvh;
         }
         @media (width >= 55em) {
             height: 100vh;
+            height: 100dvh;
         }
 
         .contact-container {
@@ -1311,6 +1321,7 @@ section {
             margin-top: auto;
             width: 100%;
             height: 100vh;
+            height: 100dvh;
             color: white;
 
             display: flex;
