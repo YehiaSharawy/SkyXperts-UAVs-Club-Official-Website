@@ -206,7 +206,7 @@ section {
   height: 100dvh;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   /*Main Section*/
   /*Goals & Objectives Section*/
   /*Sponsors Section*/
@@ -350,6 +350,11 @@ section:nth-child(3) {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (width <= 55em) {
+  section:nth-child(3) {
+    height: 110dvh;
+  }
 }
 section:nth-child(3)::before {
   content: "";
@@ -515,7 +520,7 @@ section:nth-child(4) {
 }
 @media (width <= 55em) {
   section:nth-child(4) {
-    height: 111dvh;
+    height: 121dvh;
   }
 }
 section:nth-child(4) h2 {
@@ -789,7 +794,7 @@ section:nth-child(6) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 160vh;
+  height: 170vh;
 }
 @media (width >= 37em) and (width <= 42em) {
   section:nth-child(6) {

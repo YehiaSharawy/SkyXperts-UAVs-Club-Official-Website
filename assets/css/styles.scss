@@ -242,7 +242,7 @@ section {
     height: 100dvh;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 
     .title {
         display: flex;
@@ -444,6 +444,10 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media (width <= 55em) {
+            height: 110dvh;
+        }
 
         &::before {
             content: "";
@@ -665,7 +669,7 @@ section {
         padding-top: 7em;
 
         @media (width <= 55em) {
-            height: 111dvh;
+            height: 121dvh;
         }
 
         h2 {
@@ -1025,7 +1029,7 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 160vh;
+        height: 170vh;
 
         @media (width >= 37em) and (width <= 42em) {
             height: 161.5vh;
