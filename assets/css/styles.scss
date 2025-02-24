@@ -458,10 +458,6 @@ section {
                 margin-top: 2rem;
                 padding: 0 1rem;
             }
-
-            @media (max-height: 768px) {
-                margin-top: 70vh;
-            }
         }
 
         h1 {
@@ -474,7 +470,7 @@ section {
             }
             @media (max-height: 768px) {
                 font-size: clamp(2.5rem, 6vw, 6em);
-                margin-top: -1.5rem;
+                margin-top: 37rem;
             }
         }
     } /*Main Section*/
@@ -494,7 +490,7 @@ section {
 
         @media (max-height: 768px) {
             padding-top: 6em;
-            min-height: 130vh;
+            min-height: 102vh;
         }
 
         &::before {
@@ -734,7 +730,7 @@ section {
 
         @media (max-height: 768px) {
             padding-top: 5em;
-            min-height: 140vh;
+            /* min-height: 140vh; */
         }
 
         h2 {
