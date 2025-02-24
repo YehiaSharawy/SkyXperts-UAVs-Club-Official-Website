@@ -22,6 +22,7 @@ $font-mono: "Overpass Mono", serif;
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 body {
     display: flex;
@@ -33,6 +34,8 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
     overflow-x: hidden;
+    overflow-y: auto;
+    height: 100dvh;
 
     a {
         text-decoration: none;
