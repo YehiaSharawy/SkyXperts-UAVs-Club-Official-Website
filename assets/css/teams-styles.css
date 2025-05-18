@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #101010;
+  background-color: #1d0200;
   background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/etc/nnnoise.svg");
   display: flex;
   flex-direction: column;
@@ -157,7 +157,7 @@ section:nth-child(2) .cards-container .separator {
   align-items: center;
   width: 100vw;
   height: 4em;
-  margin: 2em 0;
+  margin: 2em 0em;
   background-image: radial-gradient(circle, rgba(52, 50, 202, 0.8) 30%, rgba(255, 255, 255, 0) 92%);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -184,20 +184,23 @@ section:nth-child(2) .cards-container .first-card-layer {
   width: inherit;
   display: flex;
   justify-content: center;
+  margin: 2rem 0;
 }
 section:nth-child(2) .cards-container .second-card-layer {
   width: inherit;
   justify-content: space-evenly;
   display: flex;
+  margin: 2rem 0;
 }
 section:nth-child(2) .cards-container .third-card-layer {
   width: inherit;
   justify-content: space-evenly;
   display: flex;
+  margin: 2rem 0;
 }
 section:nth-child(2) .cards-container .fourth-card-layer {
   width: inherit;
-  height: 85vh;
+  height: 200vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,19 +210,23 @@ section:nth-child(2) .cards-container .fourth-card-layer .first-layer {
   display: flex;
   width: inherit;
   justify-content: space-evenly;
-  /* margin-bottom: 2.5em; */
+  /* height: 25rem; */
+  margin: 2rem 0;
 }
 section:nth-child(2) .cards-container .fourth-card-layer .second-layer {
   display: flex;
   width: inherit;
   justify-content: space-evenly;
+  margin: 2rem 0;
 }
 section:nth-child(2) .cards-container .fifth-card-layer {
   width: inherit;
   justify-content: space-evenly;
   display: flex;
+  margin: 2rem 0;
 }
 section:nth-child(2) .cards-container .sixth-card-layer {
+  /* margin: 2rem 0; */
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
   grid-template-rows: repeat(2, auto); /* Two rows */

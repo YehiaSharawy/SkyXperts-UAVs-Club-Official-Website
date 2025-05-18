@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SkyXperts UAVs Club Official Website</title>
+        <link rel="icon" href="./assets/imgs/logos/favicon.png" />
         <link rel="stylesheet" href="assets/css/styles.css" />
     </head>
     <body>
@@ -39,8 +40,6 @@
                     </svg>
                 </label>
             </div>
-
-            <!-- Sidebar (Hidden by Default) -->
             <input type="checkbox" id="sidebar-active" />
             <div class="links-container">
                 <!-- Close Sidebar Button -->
@@ -57,8 +56,6 @@
                         />
                     </svg>
                 </label>
-
-                <!-- Sidebar Links -->
                 <ul class="links">
                     <li><a href="#mission">Mission & Vision</a></li>
                     <li><a href="#sponsors">Sponsors</a></li>
@@ -70,19 +67,20 @@
         </nav>
 
         <section id="home">
-            <div class="image"></div>
-            <!-- <div class="solid-color"></div> -->
-            <h1>Sky<span id="red">X</span>perts UAVs Club</h1>
-            <h6>
-                A project by students of the Arab Academy for Science and
-                Technology
-            </h6>
-            <a href="#mission"><div class="arrow bounce"></div></a>
+            <div class="header-container">
+                <h1>Sky<span id="red">X</span>perts UAVs Club</h1>
+                <h6>
+                    A project by students of the Arab Academy for Science and
+                    Technology
+                </h6>
+            </div>
+            <a href="#mission"><span class="arrow bounce"></span></a>
         </section>
         <section id="mission">
-            <h2 class="fade-in hollow-text">Our Objective</h2>
-            <div class="fade-in border-animate">
-                <p class="handwritten">
+            <h1>GOALS & OBJECTIVES</h1>
+            <div class="mission-container">
+                <div class="mission-background"></div>
+                <p>
                     Our primary objective is to manufacture an Quadcopter, a
                     versatile and robust UAV platform capable of performing a
                     wide range of tasks and to become a leading UAV team in
@@ -90,22 +88,18 @@
                     of UAV technology and inspiring others to pursue their
                     dreams in STEM fields.
                 </p>
+                <h2>Objective</h2>
             </div>
-            <img
-                src="./assets/imgs/etc/drone1.png"
-                alt="drone 1"
-                loading="lazy"
-            />
-            <h2 class="fade-in hollow-text">Our Goal</h2>
-            <div class="fade-in border-animate">
-                <p class="handwritten">
+            <div class="mission-container">
+                <div class="mission-background"></div>
+                <p>
                     Our goal is to participate in 3 international competitions
                     to show our skills and experience. We seek to participate in
                     SUAS for Quadcopters, SAE for Fixed Wings, and Mate ROV for
                     rovs.
                 </p>
+                <h2>Goal</h2>
             </div>
-
             <div class="sponsor-carousel">
                 <ul>
                     <li>
@@ -195,10 +189,6 @@
             </div>
         </section>
         <section id="sponsors">
-            <!-- <span class="title">
-                <div class="notebook-grid"></div>
-                <h2 class="fade-in">Our Sponsors</h2>
-            </span> -->
             <h2>Current Sponsors</h2>
             <p>
                 Thank you to our incredible sponsors for making our journey
@@ -241,15 +231,25 @@
                     <h2 class="fade-in">Our Latest Updates</h2>
                     <p>
                         Stay up to date with the team <br />as we grow closer to
-                        SUAS 2025!
+                        ICMTC 2025 & SUAS 2026!
                     </p>
-                    <a href="https://suas-competition.org/"
-                        ><img
-                            src="./assets/imgs/logos/suas-logo.png"
-                            alt=""
-                            loading="lazy"
-                    /></a>
-                    <a href="https://suas-competition.org/" class="blogsButton"
+                    <div class="competition-logo-container">
+                        <a href="https://suas-competition.org/"
+                            ><img
+                                src="./assets/imgs/logos/suas-logo.png"
+                                alt=""
+                                loading="lazy"
+                        /></a>
+                        <a href="https://uavc.conferences.ekb.eg/"
+                            ><img
+                                src="./assets/imgs/logos/icmtc-logo.jpeg"
+                                alt=""
+                                loading="lazy"
+                        /></a>
+                    </div>
+                    <a
+                        href="https://uavc.conferences.ekb.eg/"
+                        class="blogsButton"
                         >Learn More</a
                     >
                 </span>
@@ -312,7 +312,7 @@
         <section id="contactus">
             <div class="contact-container interactive">
                 <div class="contact-background"></div>
-                <div class="reachout-container">
+                <!-- <div class="reachout-container">
                     <div class="reachout-title">
                         <h2>Reach out to us</h2>
                     </div>
@@ -372,8 +372,8 @@
                             referrerpolicy="no-referrer-when-downgrade"
                         ></iframe>
                     </div>
-                </div>
-                <div class="sendmessage-container">
+                </div> -->
+                <!-- <div class="sendmessage-container">
                     <div class="sendmessage-title">
                         <h2>Send us a message</h2>
                     </div>
@@ -435,9 +435,9 @@
                             <button type="submit">Send</button>
                         </form>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <footer id="footer">
+            <!-- <footer id="footer">
                 <div class="col col1">
                     <a href="#home"
                         ><img
@@ -449,7 +449,7 @@
                     </p>
                 </div>
                 <div class="backdrop"></div>
-            </footer>
+            </footer> -->
         </section>
 
         <script src="script.js"></script>
