@@ -19,9 +19,11 @@ $font-mono: "Overpass Mono", serif;
     box-sizing: border-box;
     -webkit-scroll-behavior: smooth;
 }
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    max-width: 100%;
 }
 body {
     display: flex;
@@ -1010,9 +1012,11 @@ section {
         }
 
         .contact-container {
-            position: absolute;
+            position: relative; /* keep it in the flow */
+            max-height: 70vh; /* or whatever works for mobile */
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
             z-index: 1;
-            overflow: hidden;
             display: flex;
             width: 80%;
             height: 78rem;
