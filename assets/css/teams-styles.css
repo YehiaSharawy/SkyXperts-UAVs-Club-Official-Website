@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #1d0200;
+  background-color: #0d1117;
   background-image: url("https://yehiasharawy.github.io/SkyXperts-UAVs-Club-Official-Website/assets/imgs/etc/nnnoise.svg");
   display: flex;
   flex-direction: column;
@@ -138,6 +138,8 @@ section:nth-child(2) {
   flex-direction: column;
   padding-top: 4em;
   height: 300em;
+  gap: 10rem;  /* adjust “2rem” to taste */
+
 }
 section:nth-child(2) .cards-container {
   display: flex;
@@ -181,10 +183,21 @@ section:nth-child(2) .cards-container .separator h3 {
   /* font-family: "Overpass Mono", serif; */
 }
 section:nth-child(2) .cards-container .first-card-layer {
-  width: inherit;
-  display: flex;
+  display: flex; 
   justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   margin: 2rem 0;
+}
+
+.cards-container .card {
+  overflow: hidden;
+}
+.cards-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 section:nth-child(2) .cards-container .second-card-layer {
   width: inherit;
@@ -429,4 +442,10 @@ section:nth-child(2) footer .social .link {
   align-items: center;
 }
 
+section#team .cards-container .first-card-layer .card:first-child {
+  transform: scale(1.05);
+  transform-origin: center bottom;
+  transition: transform 0.2s ease-out;
+}
 /*# sourceMappingURL=teams-styles.css.map */
+
