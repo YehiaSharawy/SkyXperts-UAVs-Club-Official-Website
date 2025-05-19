@@ -460,16 +460,22 @@ section:nth-child(3) .mission-container p {
 @media (max-width: 1240px) {
   section:nth-child(3) .mission-container:nth-child(odd) {
     min-height: 15em;
+    min-height: 15svh;
+    min-height: 15lvh;
   }
 }
 @media (max-height: 920px) {
   section:nth-child(3) .mission-container:nth-child(odd) {
     min-height: 17em;
+    min-height: 17svh;
+    min-height: 17lvh;
   }
 }
 @media (max-height: 870px) {
   section:nth-child(3) .mission-container:nth-child(odd) {
     min-height: 12em;
+    min-height: 12svh;
+    min-height: 12lvh;
   }
 }
 section:nth-child(3) .mission-container:nth-child(odd) h2 {
@@ -489,6 +495,8 @@ section:nth-child(3) .mission-container:nth-child(even) {
   margin-top: 10rem;
   margin-bottom: 1rem;
   min-height: 15rem;
+  min-height: 15svh;
+  min-height: 15lvh;
 }
 @media (max-height: 870px) {
   section:nth-child(3) .mission-container:nth-child(even) {

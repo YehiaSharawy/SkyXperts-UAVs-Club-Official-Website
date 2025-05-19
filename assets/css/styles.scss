@@ -580,12 +580,18 @@ section {
             &:nth-child(odd) {
                 @media (max-width: 1240px) {
                     min-height: 15em;
+                    min-height: 15svh;
+                    min-height: 15lvh;
                 }
                 @media (max-height: 920px) {
                     min-height: 17em;
+                    min-height: 17svh;
+                    min-height: 17lvh;
                 }
                 @media (max-height: 870px) {
                     min-height: 12em;
+                    min-height: 12svh;
+                    min-height: 12lvh;
                 }
 
                 h2 {
@@ -612,6 +618,8 @@ section {
                 margin-top: 10rem;
                 margin-bottom: 1rem;
                 min-height: 15rem;
+                min-height: 15svh;
+                min-height: 15lvh;
 
                 @media (max-height: 870px) {
                     margin-top: 7rem;
