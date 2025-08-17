@@ -4,31 +4,129 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Meet The Team</title>
+        <link rel="icon" href="./assets/imgs/logos/favicon.png" />
         <link rel="stylesheet" href="assets/css/teams-styles.css" />
     </head>
     <body>
-        <header class="navbar-container">
-            <a href="#home">
+        <nav class="navbar-container">
+            <a href="index.html#home">
                 <img
                     src="./assets/imgs/logos/skyxpert-short-logo.png"
                     alt="SkyXpert Logo"
                     class="navbar-left"
                 />
             </a>
-            <ul class="navbar-right">
-                <li><a href="index.html#mission">Mission &amp; Vision</a></li>
-                <li><a href="index.html#sponsors">Sponsorships</a></li>
-                <li><a href="index.html#team">Team</a></li>
-                <li><a href="index.html#blogs">Blogs</a></li>
-                <li><a href="index.html#contactus">Contact</a></li>
-            </ul>
-        </header>
+            <div class="navbar-right">
+                <ul class="links">
+                    <li><a href="index.html#mission">Mission & Vision</a></li>
+                    <li><a href="index.html#sponsors">Sponsors</a></li>
+                    <li><a href="teams.html#home">Team</a></li>
+                    <li><a href="index.html#updates">Updates</a></li>
+                    <li><a href="index.html#contactus">Contact</a></li>
+                </ul>
+
+                <!-- Sidebar Button (For Small Screens) -->
+                <label class="open-sidebar-button" for="sidebar-active">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="32px"
+                        viewBox="0 -960 960 960"
+                        width="32px"
+                        fill="#f0f0f0"
+                    >
+                        <path
+                            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                        />
+                    </svg>
+                </label>
+            </div>
+            <input type="checkbox" id="sidebar-active" />
+            <div class="links-container">
+                <!-- Close Sidebar Button -->
+                <label class="close-sidebar-button" for="sidebar-active">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="32px"
+                        viewBox="0 -960 960 960"
+                        width="32px"
+                        fill="#e8eaed"
+                    >
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                        />
+                    </svg>
+                </label>
+                <ul class="links">
+                    <li><a href="index.html#mission">Mission & Vision</a></li>
+                    <li><a href="index.html#sponsors">Sponsors</a></li>
+                    <li><a href="teams.html#home">Team</a></li>
+                    <li><a href="index.html#updates">Updates</a></li>
+                    <li><a href="index.html#contactus">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section id="home">
+            <div class="header-container">
+                <h1>Meet Our Team</h1>
+            </div>
+            <a href="#mission"><span class="arrow bounce"></span></a>
+        </section>
         <section id="team">
-            <span class="title">
+            <!-- <span class="title">
                 <div class="notebook-grid"></div>
-                <h2 class="fade-in">Meet Our Team</h2>
-            </span>
-            <div class="cards-container">
+                <h2 class="fade-in">Meet The Team</h2>
+            </span> -->
+            <div class="firstLayer-cards-container">
+                <span class="card">
+                    <div class="card-background"></div>
+                    <h3>Prof. Mohamed Abo Al Azm</h3>
+                    <span class="social-notification">
+                        <a
+                            href="https://www.linkedin.com/company/skyxperts-co"
+                            target="_blank"
+                            class="link"
+                            ><img
+                                src="./assets/imgs/logos/socialmedia/linkedin-icon.png"
+                                alt="Prof. Mohamed Abo Al Azm linkedin"
+                                loading="lazy"
+                        /></a>
+                    </span>
+                    <img
+                        src="./assets/imgs/team-imgs/Teams/Supervisor/Prof-Mohamed-Abo-Al-Azm.jpg"
+                        alt="Supervisor Prof. Mohamed Abo Al Azm"
+                        loading="lazy"
+                        class="profileImg"
+                    />
+
+                    <p>Supervisor &rarr;</p>
+                </span>
+                <span class="card">
+                    <div class="card-background"></div>
+                    <h3>Eng. Mohamed Ragab</h3>
+                    <span class="social-notification">
+                        <a
+                            href="https://www.linkedin.com/in/mohamed-a-ragab-08b8b6220/"
+                            target="_blank"
+                            class="link"
+                            ><img
+                                src="./assets/imgs/logos/socialmedia/linkedin-icon.png"
+                                alt="Eng. Mohamed Ragab linkedin"
+                                loading="lazy"
+                        /></a>
+                    </span>
+                    <img
+                        src="./assets/imgs/team-imgs/Teams/Mentors-Advisors/Mohammed-Ragab.jpg"
+                        alt="Founder and President Eng. Mohamed Ragab"
+                        loading="lazy"
+                        class="profileImg"
+                    />
+                    <p>
+                        Founder &amp; President<br />Dual Master’s degree at
+                        AAST and Klagenfurt University.
+                    </p>
+                </span>
+            </div>
+            <!-- <div class="cards-container">
                 <div class="first-card-layer">
                     <span class="card">
                         <div class="card-background"></div>
@@ -48,8 +146,10 @@
                             loading="lazy"
                         />
                         <h3>Eng. Mohamed Ragab</h3>
-                        <p>Founder &amp; President<br>Dual Master’s degree at AAST and Klagenfurt University.</p> 
-                           
+                        <p>
+                            Founder &amp; President<br />Dual Master’s degree at
+                            AAST and Klagenfurt University.
+                        </p>
                     </span>
                 </div>
                 <div class="separator">
@@ -245,8 +345,8 @@
                         <h3>Marketing Team</h3>
                     </div>
                 </div>
-            </div>
-            <footer id="footer">
+            </div> -->
+            <!-- <footer id="footer">
                 <div class="col col1">
                     <a href="#home"
                         ><img
@@ -297,7 +397,7 @@
                     <a href="#contactus">Contact Us</a>
                 </div>
                 <div class="backdrop"></div>
-            </footer>
+            </footer> -->
         </section>
         <script src="script.js"></script>
     </body>
